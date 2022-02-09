@@ -10,7 +10,7 @@ while True:
         break
     max_num = max(num_list)
     num_list.remove(max_num)
-    if (max_num**2) == (num_list[0]**2 + num_list[1]**2):
+    if (max_num**2) == num_list[0]**2 + num_list[1]**2:
         print("right")
     else:
         print("wrong")
