@@ -1,5 +1,14 @@
-import math
+a, b = map(int, input().split())
 
-n,m = map(int,input().split())
-print(math.gcd(n,m))
-print(math.lcm(n,m))
+def gcd(a,b):
+    while b > 0:
+        a,b = b, a%b
+        print(a,b)
+    return a
+
+def lcm(a,b):
+    return a*b //gcd(a,b)
+
+print(gcd(a,b))
+
+print(lcm(a,b))
