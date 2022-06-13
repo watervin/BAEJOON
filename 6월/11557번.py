@@ -1,11 +1,13 @@
 #11557번.py
-
 T = int(input())
-
-dicts = {}
-for i in range(T):
-    name = str(input())
-    value = int(input())
-    dicts[name] = value
-
-print(dicts)
+for _ in range(T):
+    N = int(input())
+    max = 0
+    mName = ""
+    for _ in range(N):
+        name, num = input().split()
+        num = int(num)
+        if(num > max):
+            max = num
+            mName = name
+    print(mName)
